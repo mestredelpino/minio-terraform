@@ -44,6 +44,6 @@ resource "minio_s3_object" "folders" {
   for_each = data.local_file.files
   depends_on = [local.minio-bucket]
   bucket_name = local.minio-bucket.bucket
-  object_name = "terraform2/${trimprefix(each.key, "../")}"
+  object_name = trimprefix(each.key, "../")
   content = each.value.content_base64
 }
