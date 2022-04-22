@@ -42,7 +42,7 @@ terraform apply
 
 1. Create a file "upload_folders/terraform.tfvars" and paste these variables to create an s3 bucket.
 ```
-folder-paths = ["",""] # List with the absolute (or relative) paths to the directories you want to upload
+folder-paths = ["",""] # List with the relative paths to the directories you want to upload
 ```
 
 For example, you might want to upload the content of the phase1 and phase2 folders, in that case the you will write the variable
