@@ -43,4 +43,12 @@ resource "helm_release" "minio" {
     name  = "mode"
     value = "distributed"
   }
+  set {
+    name  = "defaultBucket.enabled"
+    value = "true"
+  }
+  set {
+    name  = "defaultBucket.versioning"
+    value = "true"
+  }
 }
