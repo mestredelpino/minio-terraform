@@ -39,5 +39,8 @@ resource "helm_release" "minio" {
     name  = "apiIngress.hostname"
     value = var.minio-api-hostname
   }
-
+  set {
+    name  = "mode"
+    value = "distributed"
+  }
 }
